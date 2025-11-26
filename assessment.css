@@ -1,16 +1,82 @@
 body {
-  background-color: #04a6eb;
-  color: #fdffff;
-  width: 500px;
-  margin-right: auto;
-  margin-left: auto;
+  background-color: #000000;
+  background-image: radial-gradient(circle at top, #202840 0, #000000 55%);
+  color: #a9ffb5;
+  line-height: 1.6;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
 }
-button {
-  padding: 5px 20px;
-  background-color: #337ab7;
-  color: #fdffff;
-  border-style: none;
+
+/* 入力欄とボタンまわり：黒背景＋シアン枠のターミナル風 */
+#user-name {
+  height: 2.5rem;
+  background-color: #000000;
+  border: 1px solid #00f5ff;
+  color: #a9ffb5;
+  box-shadow: 0 0 0 1px rgba(0, 245, 255, 0.3);
 }
-input {
-  height: 20px;
+
+#user-name::placeholder {
+  color: rgba(120, 199, 150, 0.65);
+}
+
+#assessment.btn-primary {
+  padding-inline: 1.75rem;
+  background-color: #00a368;
+  border-color: #00a368;
+  color: #00110a;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 0 0 14px rgba(0, 245, 255, 0.45);
+  transition: background-color 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
+}
+
+#assessment.btn-primary:hover,
+#assessment.btn-primary:focus-visible {
+  background-color: #00c57b;
+  border-color: #00c57b;
+  transform: translateY(-1px);
+  box-shadow: 0 0 22px rgba(0, 245, 255, 0.8);
+}
+
+/* 診断結果カード：黒背景＋シアンフレームで現代風DOS */
+.card {
+  background-color: #020308;
+  border: 1px solid #00f5ff;
+  border-radius: 0.6rem;
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 255, 0.35),
+    0 0 32px rgba(0, 245, 255, 0.35);
+}
+
+.card-header.text-bg-primary {
+  background: linear-gradient(90deg, #00a368 0, #00f5ff 100%);
+  border-bottom: 1px solid rgba(0, 245, 255, 0.6);
+  font-weight: 600;
+  color: #00110a;
+}
+
+.card-body {
+  color: #a9ffb5;
+}
+
+/* 診断結果のテキスト：等幅で少し小さめに */
+#result-area h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+#result-area p {
+  margin-bottom: 0.25rem;
+  font-size: 0.98rem;
+}
+
+/* ツイートボタン周りの余白 */
+#tweet-area {
+  margin-top: 0.75rem;
+}
+
+/* 診断前の説明文の色をDOS風に調整 */
+.text-muted {
+  color: #7affc4 !important;
 }
